@@ -1,0 +1,135 @@
+/* RESET */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #a8dadc, #f1faee, #cdeac0);
+  min-height: 100vh;
+  color: #222;
+}
+
+/* 🔹 Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #0077b6;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-size: 26px;
+}
+.bike { color: #ff4b5c; }
+.seenk { color: white; }
+.peek { color: #ffe536; }
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li { list-style: none; }
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.nav-links a:hover,
+.nav-links .active {
+  color: #ffe536;
+  transform: scale(1.1);
+}
+
+/* 🔹 Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 🔹 Coming Soon Text */
+.coming {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 32px;
+  color: purple;
+}
+
+/* 🔹 Cards */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.bike-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.bike-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bike-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer {
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+/* 🔹 Responsive Navbar */
+@media (max-width: 768px) {
+  
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    background: #0077b6;
+    display: none;
+    margin-top: 10px;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+}

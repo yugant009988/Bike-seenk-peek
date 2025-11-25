@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact • Yugant Yadav</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/contect/style.css">
+</head>
+<body>
+
+  <!-- 🔹 Navbar -->
+  <nav class="navbar">
+    <a href="/index.html" class="logo">
+      <h1><span class="bike">BIKE</span><span class="seenk">Seenk</span><span class="peek">Peek</span></h1>
+    </a>
+
+    <div class="menu-toggle">&#9776;</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="/BIKES/index.html">Bikes</a></li>
+      <li><a href="/aboutme/index.html">About Me</a></li>
+      <li><a href="/contect me/index.html" class="active">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <main class="container main-grid">
+
+    <!-- Left card -->
+    <section class="card glass left-card reveal">
+      <h2 class="card-title">Contact Info</h2>
+
+      <div class="info">
+
+        <div class="info-row">
+          <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zM6 20v-1c0-2.76 2.24-5 5-5h2c2.76 0 5 2.24 5 5v1z"/></svg>
+          <div>
+            <div class="muted">Location</div>
+            <div class="strong">Pune, Maharashtra</div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C7.16 21 2 15.84 2 9a1 1 0 011-1h2.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.25 1.05l-2.2 2.2z"/></svg>
+          <div>
+            <div class="muted">Phone</div>
+            <div class="strong">+91 98765 43210</div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4v16h16V4zM9 18H7v-2h2v2zm0-4H7V8h2v6zm4 4h-2v-6h2v6zm4 0h-2v-4h2v4z"/></svg>
+          <div>
+            <div class="muted">Email</div>
+            <div class="strong">yugant@example.com</div>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 class="card-sub">Find me on map</h3>
+      <div class="map-wrap">
+        <iframe class="map" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124405.32168327866!2d73.780565!3d18.524564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf29e89eae19%3A0x4d6873e3b9a0c223!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1695985743263!5m2!1sen!2sin">
+        </iframe>
+      </div>
+
+      <div class="social">
+        <a class="social-btn" href="#">🌐</a>
+        <a class="social-btn" href="#">📸</a>
+        <a class="social-btn" href="#">💼</a>
+        <a class="social-btn" href="#">🐱</a>
+      </div>
+
+    </section>
+
+    <!-- Right card -->
+    <section class="card glass right-card reveal">
+      <h2 class="card-title">Send a Message</h2>
+
+      <form id="contactForm" class="contact-form" novalidate>
+
+        <div class="form-row">
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+        </div>
+
+        <div class="form-row">
+          <input id="email" name="email" type="email" placeholder="Your email" required>
+        </div>
+
+        <div class="form-row">
+          <input id="subject" name="subject" type="text" placeholder="Subject" required>
+        </div>
+
+        <div class="form-row">
+          <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit" id="sendBtn">Send Message</button>
+          <button class="btn btn-ghost" type="reset">Reset</button>
+        </div>
+
+        <div id="formStatus" role="status" class="form-status"></div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Yugant Yadav — Crafted with care</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
